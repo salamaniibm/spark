@@ -31,7 +31,7 @@ import org.apache.spark.unsafe.types.UTF8String;
 public final class OnHeapColumnVector extends WritableColumnVector {
 
   private static final boolean bigEndianPlatform =
-    ByteOrder.nativeOrder().equals(ByteOrder.BIG_ENDIAN);
+    ByteOrder.nativeOrder().equals(ByteOrder.LITTLE_ENDIAN);
 
   /**
    * Allocates columns to store elements of each field of the schema on heap.
